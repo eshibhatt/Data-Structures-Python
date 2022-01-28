@@ -93,7 +93,14 @@ class LinkedList():
       currentNode = currentNode.next
     print()
     print('Length = '+str(self.length))
-
+  
+  #Reverse Printing the linkedList (Recursive)
+  def reversePrint(self):
+    if self.head==None:
+        return
+    else:
+        reversePrint(self.head.next)
+        print(self.head.data)
 
   # Reversing the linkedList - O(n)
   def reverse(self):
